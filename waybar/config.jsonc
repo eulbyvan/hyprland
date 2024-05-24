@@ -5,8 +5,8 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 50,
-    "modules-left": ["clock","custom/weather","wlr/workspaces"],
+    "height": 30,
+    "modules-left": ["clock", "custom/weather"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["network", "bluetooth", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
@@ -54,9 +54,14 @@
         "spacing": 10
     },
 
+    // "clock": {
+    //     "format": "{: %I:%M %p   %a, %b %e}",
+    //     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    // },
+
     "clock": {
-        "format": "{: %I:%M %p   %a, %b %e}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "<b>󰥔 {:%H:%M 󰃭 %d/%m}</b>",
+        "tooltip-format": "<big> {:%Y %B}</big>\n<tt><small> {calendar}</small></tt>"
     },
 
     "backlight": {
@@ -113,6 +118,7 @@
     "temperature": {
         "thermal-zone": 1,
         "format": "{temperatureF}°F ",
+        // "format": "{temperatureC}°C ",
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C "
     },
