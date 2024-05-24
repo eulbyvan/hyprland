@@ -5,39 +5,12 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 30,
-    "modules-left": ["clock", "custom/weather"],
+    "height": 37,
+    "modules-left": ["clock", "custom/weather", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["network", "bluetooth", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
-    },
-
-    "wlr/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        }
-    },
-    
-    "custom/power_profile":{
-        //shows the current power profile and switches to next on click
-        "exec": "asusctl profile -p | sed s:'Active profile is'::",
-        "interval": 30,
-        "format": "󰈐{}", 
-        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
-        "signal": 8
     },
 
    "custom/weather" : {
@@ -54,13 +27,9 @@
         "spacing": 10
     },
 
-    // "clock": {
-    //     "format": "{: %I:%M %p   %a, %b %e}",
-    //     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    // },
-
     "clock": {
-        "format": "<b>󰥔 {:%H:%M 󰃭 %d/%m}</b>",
+        // "format": " {:%H:%M  %d/%m}",
+        "format": " {:%I:%M %p   %a, %b %e}",
         "tooltip-format": "<big> {:%Y %B}</big>\n<tt><small> {calendar}</small></tt>"
     },
 
